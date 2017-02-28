@@ -1,11 +1,11 @@
 package hello;
 
-public class WebhookResponse {
+public class RouteResponse {
 
     private final long id;
     private final String content;
 
-    public WebhookResponse(long id, String content) {
+    public RouteResponse(long id, String content) {
         this.id = id;
         this.content = content;
     }

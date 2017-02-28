@@ -12,8 +12,8 @@ public class WebhookController {
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
 
-    @RequestMapping("/miawebhook")
-    public WebhookResponse greeting(@RequestParam(value= "name", defaultValue = "World") String name) {
-        return new WebhookResponse(counter.incrementAndGet(), String.format(template, name));
+    @RequestMapping("/greeting")
+    public RouteResponse showRoute(@RequestParam(value="name", defaultValue="World") String name) {
+        return new RouteResponse(counter.incrementAndGet(), String.format(template, name));
     }
 }
